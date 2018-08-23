@@ -1,17 +1,28 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
+group='com.github.wxlvampire'
+
 //apply plugin: 'com.neenbedankt.android-apt'
 //apply plugin: 'com.jakewharton.butterknife'
 
 repositories {
     jcenter()
-    mavenCentral()
+   
     maven { url "https://jitpack.io" }
 
     flatDir {
         dirs 'libs'
     }
 
+}
+buildscript {
+	repositories {
+		mavenCentral()
+	}
+
+	dependencies {
+		classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
+	}
 }
 android {
     compileSdkVersion 25
