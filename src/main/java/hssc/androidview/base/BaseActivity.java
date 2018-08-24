@@ -27,7 +27,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.ButterKnife;
+//import butterknife.ButterKnife;
 import hssc.androidview.R;
 import hssc.androidview.utils.AppUtils;
 import hssc.androidview.utils.StatusBarCompat;
@@ -46,7 +46,7 @@ public abstract class BaseActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         doBeforeContentView();
         setContentView(getLayoutId());
-        ButterKnife.inject(this);
+//        ButterKnife.inject(this);
         TAG = getTag().getSimpleName().toString();
         Log.e(TAG,"=====onCreate=====");
 
@@ -99,7 +99,7 @@ public abstract class BaseActivity extends AppCompatActivity{
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        ButterKnife.reset(this);
+//        ButterKnife.reset(this);
     }
     public void doBeforeContentView(){
         //设置昼夜主题
